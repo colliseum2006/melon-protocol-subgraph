@@ -1,0 +1,21 @@
+type Transfer @entity {
+  "This entity represents MLN Transfer"
+  id: ID!
+  "Total amount of Transferred MLN"
+  value: BigInt!
+}
+type Approval @entity {
+  "This entity represents Approval of MLN user address"
+  id: ID!
+  _owner: Bytes! 
+  "Owner address"
+  address: String!
+  "User transaction"
+  transactionCount: Int!
+}
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  from: Bytes! # address
+  to: Bytes! # address
+}
